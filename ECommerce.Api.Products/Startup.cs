@@ -1,18 +1,25 @@
 // ECommerce.Api.Products/Startup.cs
-using ECommerce.Api.Products.Data;
-using ECommerce.Api.Products.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using Microsoft.Extensions.Configuration;
+using System;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 public class Startup
 {
+    public IConfiguration Configuration { get; }
+
+    public Startup(IConfiguration configuration)
+    {
+        Configuration = configuration;
+    }
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddDbContext<ProductsDbContext>(options =>
-            options.UseMySql(Configuration.GetConnectionString("DefaultConnection"), 
+            options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
             new MySqlServerVersion(new Version(8, 0, 21))));
-        
+
         services.AddScoped<IProductsService, ProductsService>();
         services.AddControllers();
         services.AddAutoMapper(typeof(Startup));

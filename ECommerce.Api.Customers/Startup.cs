@@ -1,18 +1,26 @@
 // ECommerce.Api.Customers/Startup.cs
-using ECommerce.Api.Customers.Data;
-using ECommerce.Api.Customers.Services;
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 
-public class Startup
-{
+public class Startup{
+    public IConfiguration Configuration { get; }
+
+    public Startup(IConfiguration configuration)
+    {
+        Configuration = configuration;
+    }
+
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddDbContext<CustomersDbContext>(options =>
-            options.UseMySql(Configuration.GetConnectionString("DefaultConnection"), 
+            options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
             new MySqlServerVersion(new Version(8, 0, 21))));
-        
+
         services.AddScoped<ICustomersService, CustomersService>();
         services.AddControllers();
         services.AddAutoMapper(typeof(Startup));

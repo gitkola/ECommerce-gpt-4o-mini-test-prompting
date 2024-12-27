@@ -1,12 +1,20 @@
 // ECommerce.Api.Orders/Startup.cs
-using ECommerce.Api.Orders.Data;
-using ECommerce.Api.Orders.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Configuration;
+using System;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 
-public class Startup
-{
+public class Startup {
+    public IConfiguration Configuration { get; }
+
+    public Startup(IConfiguration configuration)
+    {
+        Configuration = configuration;
+    }
+
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddDbContext<OrdersDbContext>(options =>
