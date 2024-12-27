@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "ECommerce.Api.Customers": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
