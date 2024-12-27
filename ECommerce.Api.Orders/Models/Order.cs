@@ -12,5 +12,5 @@ public class Order
     public Guid CustomerId { get; set; }
     
     [Required]
-    public List<OrderItem> OrderItems { get; set; }
+    public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 }
