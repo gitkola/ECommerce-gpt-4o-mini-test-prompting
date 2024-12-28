@@ -1,0 +1,130 @@
+{
+    "url": "https://api.openai.com/v1/chat/completions",
+    "method": "POST",
+    "headers": {
+        "Authorization": "Bearer sk-proj-BOn3sdH0sSL…",
+        "Content-Type": "application/json"
+    },
+    "body": {
+        "model": "OpenAIChatLanguageModel",
+        "config": {
+            "compatibility": "strict",
+            "fetch": "function()",
+            "headers": "function()",
+            "provider": "openai.chat",
+            "url": "function()"
+        },
+        "modelId": "gpt-4o-mini",
+        "settings": {},
+        "specificationVersion": "v1",
+        "temperature": 0,
+        "maxTokens": 8192,
+        "messages": [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "## Current `PartialProjectState`:↵```json↵{↵  \"Par…,↵    \"tasks\": [],↵    \"files\": []↵  }↵}↵```↵↵---"
+                    }
+                ]
+            },
+            {
+                "role": "user",
+                "id": "1735315812184",
+                "service": "simpler",
+                "content": "# Завдання↵↵Розробити ASP.NET Solution \"ECommerce\"…ним шляхом до відповідного файлу у першому рядку."
+            },
+            {
+                "role": "assistant",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "```csharp↵// ECommerce.Api.Customers/Program.cs↵us…i.Products\",↵    \"ECommerce.Api.Search\"↵  ]↵}↵```"
+                    }
+                ]
+            },
+            {
+                "role": "user",
+                "id": "1735317144193",
+                "service": "simpler",
+                "content": "Будь ласка, надай повний код файлів у яких неімпле…перевір правильність вмісту файлу `ECommerce.sln`"
+            },
+            {
+                "role": "assistant",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "```csharp↵// ECommerce.Api.Customers/Controllers/C… всі чотири проекти, які були вказані в завданні."
+                    }
+                ]
+            },
+            {
+                "role": "user",
+                "id": "1735317508402",
+                "service": "simpler",
+                "content": "Але ж Solution файли мають бути у `xml` або похідному від нього форматі, чи не так?"
+            },
+            {
+                "role": "assistant",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "Так, ви праві. Файл рішення (.sln) для Visual Stud…конфігурації та версії. Дякую за ваше зауваження!"
+                    }
+                ]
+            },
+            {
+                "role": "user",
+                "id": "1735317996997",
+                "service": "simpler",
+                "content": "Дякую! Прошу ще надати необхідні файли для кожного…і як `.csproj`, `Properties/launchSettings.json`."
+            },
+            {
+                "role": "assistant",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "Ось необхідні файли для кожного з проектів, включа…я для роботи з MySQL, AutoMapper та ASP.NET Core."
+                    }
+                ]
+            },
+            {
+                "role": "user",
+                "id": "1735318881097",
+                "service": "simpler",
+                "content": "Не вистачає ще такого функціоналу: Мікросервіс Sea…ит за допомогою `JSON.stringify(data, null, 2);`."
+            },
+            {
+                "role": "assistant",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "Щоб реалізувати функціонал, який дозволяє мікросер…ідповідь у форматі JSON, відображену на сторінці."
+                    }
+                ]
+            },
+            {
+                "role": "user",
+                "id": "1735328191523",
+                "service": "simpler",
+                "content": "Потрібно імплеметувати метод `GetByCustomerIdAsync…   \"description\": \"Description 1\"↵    }↵  }↵}↵```"
+            },
+            {
+                "role": "assistant",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "Щоб реалізувати метод `GetByCustomerIdAsync` у кла…и API, щоб переконатися, що все працює правильно."
+                    }
+                ]
+            },
+            {
+                "role": "user",
+                "id": "1735330807547",
+                "service": "simpler",
+                "content": "Виникає помилка при запитах 'http://localhost:5002…рав, будь ласка, помилку при запитах до OrdersDb."
+            }
+        ]
+    }
+}

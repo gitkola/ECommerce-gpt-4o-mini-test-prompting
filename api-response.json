@@ -1,0 +1,55 @@
+{
+    "DefaultGenerateTextResult": {
+        "experimental_output": null,
+        "experimental_providerMetadata": {
+            "openai": {
+                "reasoningTokens": 0,
+                "cachedPromptTokens": 0
+            }
+        },
+        "finishReason": "stop",
+        "logprobs": null,
+        "request": {
+            "body": "{\"model\":\"gpt-4o-mini\",\"max_tokens\":8192,\"temperature\":0,\"messages\":[{\"role\":\"user\",\"content\":\"## Curren…"
+        },
+        "response": {
+            "headers": {
+                "access-control-expose-headers": "X-Request-ID",
+                "alt-svc": "h3=\":443\"; ma=86400",
+                "cf-cache-status": "DYNAMIC",
+                "cf-ray": "8f8c0270cb1922f5-KBP",
+                "connection": "keep-alive"
+            },
+            "id": "chatcmpl-AjB6Wl0MhwI4rwwxnHedkNoa6Nk0f",
+            "messages": [
+                {
+                    "stepType": "initial",
+                    "text": "Щоб виправити помилку, пов'язану з відсутністю таблиці `OrderItems` у базі даних `OrdersDb`, вам потрібно створити цю таблицю. Для цьог…",
+                    "toolCalls": [],
+                    "toolResults": [],
+                    "finishReason": "stop"
+                }
+            ],
+            "modelId": "gpt-4o-mini-2024-07-18",
+            "timestamp": "Fri Dec 27 2024 22:20:08 GMT+0200 (Eastern European Standard Time)",
+            "steps": [
+                {
+                    "stepType": "initial",
+                    "text": "Щоб виправити помилку, пов'язану з відсутністю таблиці `OrderItems` у базі даних `OrdersDb`, вам потрібно створити цю таблицю. Для цьог…",
+                    "toolCalls": [],
+                    "toolResults": [],
+                    "finishReason": "stop"
+                }
+            ],
+            "text": "Щоб виправити помилку, пов'язану з відсутністю таблиці `OrderItems` у базі даних `OrdersDb`, вам потрібно створити цю таблицю. Для цьог…",
+            "toolCalls": [],
+            "toolResults": [],
+            "usage": {
+                "promptTokens": 12032,
+                "completionTokens": 808,
+                "totalTokens": 12840
+            },
+            "warnings": []
+        }
+    }
+}
